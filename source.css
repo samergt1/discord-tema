@@ -1,208 +1,145 @@
 :root {
   --app-bg: url("https://raw.githubusercontent.com/samergt1/discord-tema/main/assets/fondo.jpg");
-  --app-blur: 8px;
-  --app-margin: 24px;
+  --app-blur: 10px;
   --app-radius: 12px;
+  --app-margin: 20px;
 
-  --main-rgb: 15, 15, 20;
-  --main-content-opacity: 0.3;
-  --sidebar-opacity: 0.4;
-  --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
-  --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
+  --main-rgb: 10, 10, 10;
+  --main-opacity: 0.2;
+  --sidebar-opacity: 0.3;
 
-  --accent-hue: 348;
-  --accent-saturation: 65%;
-  --accent-lightness: 35%;
-  --accent-hsl: var(--accent-hue), calc(var(--accent-saturation) * var(--saturation-factor)), var(--accent-lightness);
-  --accent-opacity: 1;
-  --accent-text-color: hsl(0, 0%, 95%);
+  --accent-hue: 350;
+  --accent-saturation: 60%;
+  --accent-lightness: 30%;
+  --accent-hsl: var(--accent-hue), var(--accent-saturation), var(--accent-lightness);
+  --accent-color: hsla(var(--accent-hsl), 0.8);
+  --accent-text: #f4f4f4;
 
-  --scrollbar-color: 110, 30, 41;
-  --scrollbar-opacity: 0.25;
-  --scrollbar-opacity-hover: 0.35;
+  --scrollbar-thumb: 110, 30, 41;
+  --scrollbar-opacity: 0.3;
+  --scrollbar-hover: 0.45;
 
-  --textarea-color: 255,255,255;
-  --textarea-alpha: 0.08;
-  --textarea-alpha-focus: 0.12;
-  --textarea-text-color: #f1f1f1;
-  --textarea-placeholder-color: #aaaaaa;
-  --input-height: 36px;
-  --input-radius: 18px;
-
-  --card-color: rgba(30, 15, 20, 0.4);
-  --card-color-hover: rgba(30, 15, 20, 0.5);
-  --card-color-select: rgba(60, 30, 40, 0.6);
-
-  --button-color: hsla(var(--accent-hsl), var(--accent-opacity));
-  --button-text-color: var(--accent-text-color);
-  --button-radius: 16px;
-  --button-height: 32px;
-  --button-padding: 0 16px;
+  --card-bg: rgba(0, 0, 0, 0.3);
+  --card-hover: rgba(0, 0, 0, 0.45);
 }
 
-body {
-  background-color: transparent;
-}
 
 .appMount__51fd7 {
-  background: var(--app-bg) no-repeat center center / cover !important;
+  background: var(--app-bg) center/cover no-repeat !important;
   backdrop-filter: blur(var(--app-blur));
-}
-
-.appMount__51fd7 * {
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.appMount__51fd7 svg {
-  filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.5));
+  color: var(--accent-text);
 }
 
 .layers__160d8 {
-  margin: calc(var(--app-margin) / 2) var(--app-margin) var(--app-margin) var(--app-margin);
-  overflow: hidden;
-  z-index: 1;
-  backdrop-filter: blur(var(--app-blur));
-}
-
-.typeMacOS__421ed + .app_a3002d .layers__160d8 {
   margin: var(--app-margin);
-}
-
-.app__160d8,
-.bg__960e4 {
-  background-color: transparent;
-}
-
-.container_a2f514 {
-  background: var(--app-bg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.container_a2f514 .content_a2f514 {
-  padding: 16px;
-  background-color: var(--card-color);
+  background-color: rgba(var(--main-rgb), var(--main-opacity));
   border-radius: var(--app-radius);
-  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(var(--app-blur));
 }
 
-/* Scrollbars */
+
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(var(--scrollbar-color), var(--scrollbar-opacity));
+  background-color: rgba(var(--scrollbar-thumb), var(--scrollbar-opacity));
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(var(--scrollbar-color), var(--scrollbar-opacity-hover));
+  background-color: rgba(var(--scrollbar-thumb), var(--scrollbar-hover));
 }
 
-/* Canal activo */
+
 .wrapper-2jXpOf.selected-1sf9UK,
 .modeSelected-3DmyhH {
-  background-color: hsla(var(--accent-hsl), 0.25) !important;
-  color: var(--accent-text-color) !important;
+  background-color: var(--accent-color);
   border-radius: 6px;
 }
-
-/* Hover canales */
 .wrapper-2jXpOf:hover {
-  background-color: hsla(var(--accent-hsl), 0.15);
+  background-color: hsla(var(--accent-hsl), 0.25);
+}
+.name-28HaxV, .link-39sEB3 {
+  color: var(--accent-text);
 }
 
-/* Botones */
-.button-1cRKG6,
-.lookFilled__201d5 {
-  background-color: var(--button-color) !important;
-  color: var(--button-text-color) !important;
-  border-radius: var(--button-radius);
-  padding: var(--button-padding);
-}
-.button-1cRKG6:hover,
-.lookFilled__201d5:hover {
-  filter: brightness(1.1);
-}
 
-/* Cuadro de mensaje */
 .channelTextArea__74017 .scrollableContainer__74017 {
-  background-color: rgba(var(--textarea-color), var(--textarea-alpha));
-  border-radius: var(--input-radius);
-  color: var(--textarea-text-color);
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 10px;
+  color: #eee;
 }
 .channelTextArea__74017 .placeholder__1b31f {
-  color: var(--textarea-placeholder-color);
+  color: #aaa;
 }
 
-/* Popouts y tarjetas */
-.container_bd9e38,
-.container_e88f3f,
-.container__2637a,
-.popout__3f413 {
-  background-color: var(--card-color) !important;
+
+.button-1cRKG6 {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.button-1cRKG6:hover {
+  filter: brightness(1.2);
+}
+
+
+.popout__3f413, .container__26baa {
+  background-color: var(--card-bg);
   border-radius: var(--app-radius);
   backdrop-filter: blur(var(--app-blur));
 }
 
-/* Mensajes */
+
 .message-2CShn3 {
-  background-color: rgba(var(--main-rgb), 0.15);
+  background-color: rgba(var(--main-rgb), 0.1);
   border-left: 3px solid transparent;
-  border-radius: var(--app-radius);
-  margin-bottom: 4px;
+  border-radius: 8px;
+  margin: 6px 0;
+  transition: background-color 0.2s ease;
 }
 .message-2CShn3:hover {
-  border-left: 3px solid hsla(var(--accent-hsl), 0.6);
   background-color: rgba(var(--main-rgb), 0.25);
+  border-left: 3px solid var(--accent-color);
 }
 
-/* Tipografía general */
-* {
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
-  font-family: "Segoe UI", sans-serif;
-}
 
-/* Discord headers y secciones */
-.header__3c90b, .title__3e167 {
-  color: var(--accent-text-color) !important;
-}
-
-/* Animación sutil en selección */
-.wrapper-2jXpOf,
-.message-2CShn3,
-.button-1cRKG6 {
-  transition: background-color 0.2s ease, border 0.2s ease;
-}
-
-/* Mention highlight */
-.mention {
-  background-color: hsla(var(--mention-hsl), 0.2);
-  border-left: 3px solid hsla(var(--mention-hsl), 0.5);
-  padding-left: 6px;
-  border-radius: 6px;
-}
-
-/* Embeds y bloques */
-.embedWrapper__8e4f4,
 .markup_a7e664 code,
 .pre__3e4aa {
   background-color: rgba(0, 0, 0, 0.3);
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 13px;
+}
+
+
+.statusOnline-1xZ_ZR { color: #9f9; }
+.statusIdle-3BGOeK { color: #ffc107; }
+.statusDnd-1x_ZZR { color: #f66; }
+.statusOffline-3wZcJx { color: #888; }
+
+
+* {
+  font-family: 'Segoe UI', sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+.userPopoutOuter_d739b2 {
+  background: var(--card-bg);
+  backdrop-filter: blur(var(--app-blur));
   border-radius: var(--app-radius);
 }
 
-/* Estado de conexión */
-.statusOnline-1xZ_ZR {
-  color: #9cffc0;
+.embedWrapper__8e4f4 {
+  background-color: rgba(20, 0, 0, 0.2);
+  border-left: 4px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 8px;
 }
-.statusIdle-3BGOeK {
-  color: #fcd37e;
-}
-.statusDnd-1x_ZZR {
-  color: #ff6b6b;
-}
-.statusOffline-3wZcJx {
-  color: #999;
+
+.searchBar__5a20a {
+  background-color: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  color: var(--accent-text);
 }
