@@ -1,153 +1,58 @@
-/* ========== TEMA GENERAL: BURDEOS Y AZUL OSCURO ========== */
-.theme-dark {
-  /* ===== FONDOS ===== */
-  --background-primary: #0d1b2a;              /* Fondo principal del área de chat */
-  --background-secondary: #1b263b;            /* Fondo lateral y secundario */
-  --background-secondary-alt: #1b263b;        /* Fondo alternativo */
-  --background-tertiary: #415a77;             /* Bordes o divisiones entre secciones */
-  --channeltextarea-background: #1b263b;      /* Fondo del cuadro de mensaje */
-  --background-floating: #1b263b;             /* Menús y popups flotantes */
-  --modal-background: #0d1b2a;                /* Fondos de ventanas emergentes */
-  --background-accent: #6e1e29;               /* Acento en botones y bordes */
+:root {
+  /* Imagen de fondo */
+  --app-bg: url("https://github.com/samergt1/discord-tema/blob/main/assets/fondo.jpg");
 
-  /* ===== TEXTO E INTERACTIVOS ===== */
-  --text-normal: #f1f1f1;                     /* Texto principal */
-  --text-muted: #c9c9c9;                      /* Texto apagado o secundario */
-  --text-link: #6e1e29;                       /* Color de enlaces */
-  --interactive-normal: #f1f1f1;              /* Estado normal de botones e iconos */
-  --interactive-hover: #6e1e29;               /* Al pasar el cursor */
-  --interactive-active: #6e1e29;              /* Cuando está activo */
-  --interactive-muted: #415a77;               /* Cuando está deshabilitado */
+  /* Estética visual */
+  --app-blur: 8px;
+  --app-margin: 24px;
+  --app-radius: 12px;
 
-  /* ===== SCROLLBAR ===== */
-  --scrollbar-thin-thumb: #6e1e29;
-  --scrollbar-thin-track: transparent;
-}
+  /* Colores base */
+  --main-rgb: 15, 15, 20;
+  --main-content-opacity: 0.3;
+  --sidebar-opacity: 0.4;
+  --main-content-color: rgba(var(--main-rgb), var(--main-content-opacity));
+  --sidebar-color: rgba(var(--main-rgb), var(--sidebar-opacity));
 
-/* ========== CANALES Y MENÚS LATERALES ========== */
-.containerDefault-YUSmu3, 
-.channelName-2YrOjO,
-.name-28HaxV,
-.link-39sEB3,
-.wrapper-1ucjTd {
-  color: #f1f1f1 !important;
-}
+  /* Colores burdeos (accent) */
+  --accent-hue: 348; /* tono burdeos oscuro */
+  --accent-saturation: 65%;
+  --accent-lightness: 35%;
+  --accent-hsl: var(--accent-hue),calc(var(--accent-saturation) * var(--saturation-factor)),var(--accent-lightness);
+  --accent-opacity: 1;
+  --accent-text-color: hsl(0, 0%, 95%); /* texto blanco suave */
 
-.containerDefault-YUSmu3:hover {
-  background-color: #6e1e2944; /* Fondo al pasar por encima de un canal */
-}
+  /* Alertas (rojo más vivo si lo deseas) */
+  --alert-hue: 355;
+  --alert-saturation: 70%;
+  --alert-lightness: 50%;
+  --alert-text-color: hsl(0, 0%, 100%);
+  --alert-action-color: hsl(0, 0%, 100%);
 
-/* ========== MENSAJES EN EL CHAT ========== */
-.message-2CShn3 {
-  background-color: #0d1b2a;
-  border-left: 4px solid transparent;
-}
+  /* Menciones (similar al burdeos para coherencia) */
+  --mention-hue: var(--accent-hue);
+  --mention-saturation: var(--accent-saturation);
+  --mention-lightness: 40%;
+  --mention-opacity: 1;
 
-.message-2CShn3:hover {
-  border-left: 4px solid #6e1e29;
-  background-color: #1b263b;
-}
+  /* Texto del chat */
+  --text-primary: #f1f1f1;
+  --text-secondary: #bbbbbb;
+  --text-muted: #888888;
 
-/* ========== BOTONES GENERALES ========== */
-.button-1cRKG6 {
-  background-color: #6e1e29;
-  color: #f1f1f1;
-}
+  /* Scrollbar */
+  --scrollbar-color: 110, 30, 41; /* burdeos en RGB */
+  --scrollbar-opacity: 0.2;
+  --scrollbar-opacity-hover: 0.3;
 
-.button-1cRKG6:hover {
-  background-color: #8b2d36;
-}
+  /* Textarea fondo */
+  --textarea-color: 255,255,255;
+  --textarea-alpha: 0.05;
+  --textarea-alpha-focus: 0.08;
+  --textarea-text-color: #eaeaea;
 
-/* ========== MENÚS CONTEXTUALES / POPUPS ========== */
-.menu-2TXYjN {
-  background-color: #1b263b;
-  color: #f1f1f1;
-}
-
-.item-1tOPte:hover {
-  background-color: #6e1e29;
-  color: #ffffff;
-}
-
-/* ========== REACCIONES A MENSAJES ========== */
-.reaction-1hd86g {
-  background-color: #415a77;
-  border: 1px solid #6e1e29;
-}
-
-.reaction-1hd86g:hover {
-  background-color: #6e1e29;
-}
-
-/* ========== SCROLLBAR PERSONALIZADO ========== */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #6e1e29;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-/* ========== PANEL LATERAL IZQUIERDO ========== */
-
-/* Fondo general de la lista de servidores y canales */
-.sidebar-1tnWFu {
-  background-color: #0d1b2a;
-}
-
-/* Títulos de secciones como “Canales de voz”, “Normas” */
-.container-q97qHp, 
-.header-2V-4Sw, 
-.name-3BUDLf {
-  color: #f1f1f1;
-}
-
-/* Fondo del canal activo (seleccionado) */
-.wrapper-2jXpOf.selected-1sf9UK,
-.modeSelected-3DmyhH {
-  background-color: #6e1e29 !important;
-  color: #ffffff !important;
-  border-radius: 6px;
-}
-
-/* Hover sobre los canales */
-.wrapper-2jXpOf:hover,
-.modeMuted-2T4MDZ:hover {
-  background-color: #6e1e2944 !important;
-}
-
-/* Nombre de los canales */
-.name-28HaxV {
-  color: #f1f1f1 !important;
-}
-
-/* Canales silenciados o desactivados */
-.modeMuted-2T4MDZ {
-  color: #888 !important;
-}
-
-/* Íconos de servidores */
-.listItem-3SmSlK {
-  background-color: transparent !important;
-}
-
-.listItem-3SmSlK:hover {
-  background-color: #6e1e2944 !important;
-  border-radius: 16px;
-}
-
-/* Fondo del servidor seleccionado */
-.wrapper-3kah-n.selected-1Drb7Z {
-  background-color: #6e1e29 !important;
-  border-radius: 16px;
-}
-
-/* Divider entre secciones */
-.divider-2rZFJK {
-  background-color: #415a77;
-  height: 1px;
-  margin: 4px 10px;
+  /* Otros elementos */
+  --card-color: rgba(20, 20, 25, 0.4);
+  --card-color-hover: rgba(25, 25, 30, 0.5);
+  --card-color-select: rgba(30, 30, 35, 0.6);
 }
