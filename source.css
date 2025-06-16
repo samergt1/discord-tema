@@ -1,61 +1,39 @@
-/* ======================================================
-   VARIABLES
-   ====================================================== */
-:root {
-  /* ===== Fondo general ===== */
-  --background-primary: red !important; /* Cambia el fondo principal a rojo */
-  --background-secondary: orange !important; /* Cambia el fondo secundario a naranja */
-  --background-tertiary: yellow !important; /* Cambia el fondo terciario a amarillo */
+/* ==================================== */
+/* ESTILOS DE FONDO                     */
+/* ==================================== */
 
-  /* ===== Colores de acento ===== */
-  --accent-hue: 180;           /* rueda de color 0‑360 */
-  --accent-saturation: 75%;
-  --accent-lightness: 55%;
-  --accent-opacity: 1;
-  --accent-text-color: hsl(0 0% 100%);
-
-  /* ===== Mensajes ===== */
-  --message-radius: 10px;
-  --message-color: hsla(0 0% 0% / .35);
-
-  /* ===== Tipografía ===== */
-  --text-primary: hsl(0 0% 97%);
-  --text-secondary: hsl(0 0% 70%);
+/* Fondo "fondo" - La base de Discord */
+/* Esta regla afecta el elemento principal de la aplicación */
+body,
+#app-mount {
+  background-color: red !important; /* Fondo rojo */
 }
 
-/* ======================================================
-   FONDO + EFECTO GLASS
-   ====================================================== */
-/* Capa borrosa pegada a la ventana */
-.app-1q1i1E::before {                /* clase raíz de la app */
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -2;
-  background: var(--app-bg) center/cover no-repeat fixed;
-  filter: blur(var(--app-blur)) brightness(var(--app-brightness));
+/* Áreas de contenido principales (barras laterales, paneles de chat, etc.) */
+/* Haremos que estas sean transparentes */
+/* Las siguientes clases son comunes en Discord para estas áreas */
+.app-2rEoYc, /* Contenedor principal de la aplicación */
+.bg-1QIAay, /* Fondo de las barras laterales y paneles */
+.panels-j1yQMk, /* Panel de usuario inferior */
+.sidebar-1tnWFu, /* Barra lateral izquierda */
+.base-BGx2zE, /* Base del chat y lista de canales */
+.container-1r6BkF, /* Contenedores de chat */
+.scroller-3XqfQx, /* Scrollers de las listas (amigos, canales) */
+.content-1SgpWY, /* Contenido de los ajustes, etc. */
+.theme-dark .container-ZMc96U, /* Contenedor del servidor */
+.layer-86YKbF { /* Capa de modales, popups */
+  background-color: transparent !important; /* Hacerlos transparentes */
+  border: none !important; /* Eliminar bordes si los hay */
+  box-shadow: none !important; /* Eliminar sombras si las hay */
 }
 
-/* Sombras y borde curvo alrededor de toda la app */
-.app-1q1i1E > .layers-3iHuyZ {
-  margin: var(--app-margin);
-  border-radius: var(--app-radius);
-  overflow: hidden;
-  box-shadow: 0 0 30px rgb(0 0 0 / .4);
+/* Para asegurar que no haya un color de fondo residual en algunos elementos */
+[class*="background"],
+[class*="panel"],
+[class*="wrapper"] {
+    background-color: transparent !important;
 }
 
-/* Capa translúcida para paneles laterales y chat */
-.layers-3iHuyZ > .layer-3QrUeG {
-  backdrop-filter: blur(calc(var(--app-blur) * .7));
-  background: rgb(0 0 0 / .35);
-}
-
-/* ======================================================
-   MENSAJES
-   ====================================================== */
-.messageListItem-ZZ7v6g .message-2CShn3 {
-  background: var(--message-color);
-  border-radius: var(--message-radius);
-  padding: 6px 8px;
-  margin-bottom: 4px;
-}
+/* ==================================== */
+/* FIN ESTILOS DE FONDO                 */
+/* ==================================== */
