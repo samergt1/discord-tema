@@ -3,11 +3,9 @@
    ====================================================== */
 :root {
   /* ===== Fondo general ===== */
-  --app-bg: url("https://github.com/samergt1/discord-tema/blob/main/assets/fondo.jpg");
-  --app-blur: 8px;           /* cambia la fuerza del desenfoque */
-  --app-brightness: 0.75;    /* oscurece o aclara el fondo */
-  --app-radius: 10px;        /* curvatura global de bordes */
-  --app-margin: 24px;
+  --background-primary: red !important; /* Cambia el fondo principal a rojo */
+  --background-secondary: orange !important; /* Cambia el fondo secundario a naranja */
+  --background-tertiary: yellow !important; /* Cambia el fondo terciario a amarillo */
 
   /* ===== Colores de acento ===== */
   --accent-hue: 180;           /* rueda de color 0‑360 */
