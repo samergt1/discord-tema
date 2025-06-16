@@ -1,38 +1,30 @@
-/* ========== FONDO GENERAL ========== */
+/* ========== TEMA GENERAL: BURDEOS Y AZUL OSCURO ========== */
 .theme-dark {
-  --background-primary: #0d1b2a;
-  --background-secondary: #1b263b;
-  --background-secondary-alt: #1b263b;
-  --background-tertiary: #415a77;
-  --channeltextarea-background: #1b263b;
-  --background-accent: #6e1e29;
-  --background-floating: #1b263b;
-  --modal-background: #0d1b2a;
-}
+  /* ===== FONDOS ===== */
+  --background-primary: #0d1b2a;              /* Fondo principal del área de chat */
+  --background-secondary: #1b263b;            /* Fondo lateral y secundario */
+  --background-secondary-alt: #1b263b;        /* Fondo alternativo */
+  --background-tertiary: #415a77;             /* Bordes o divisiones entre secciones */
+  --channeltextarea-background: #1b263b;      /* Fondo del cuadro de mensaje */
+  --background-floating: #1b263b;             /* Menús y popups flotantes */
+  --modal-background: #0d1b2a;                /* Fondos de ventanas emergentes */
+  --background-accent: #6e1e29;               /* Acento en botones y bordes */
 
-/* ========== TEXTO Y BORDES ========== */
-:root {
-  --background-primary: #0d1b2a;
-  --background-secondary: #1b263b;
-  --background-secondary-alt: #1b263b;
-  --background-tertiary: #415a77;
-  --channeltextarea-background: #1b263b;
-  --background-accent: #6e1e29;
-  --background-floating: #1b263b;
-  --modal-background: #0d1b2a;
+  /* ===== TEXTO E INTERACTIVOS ===== */
+  --text-normal: #f1f1f1;                     /* Texto principal */
+  --text-muted: #c9c9c9;                      /* Texto apagado o secundario */
+  --text-link: #6e1e29;                       /* Color de enlaces */
+  --interactive-normal: #f1f1f1;              /* Estado normal de botones e iconos */
+  --interactive-hover: #6e1e29;               /* Al pasar el cursor */
+  --interactive-active: #6e1e29;              /* Cuando está activo */
+  --interactive-muted: #415a77;               /* Cuando está deshabilitado */
 
-  --text-normal: #f1f1f1;
-  --text-muted: #c9c9c9;
-  --text-link: #6e1e29;
-  --interactive-normal: #f1f1f1;
-  --interactive-hover: #6e1e29;
-  --interactive-active: #6e1e29;
-  --interactive-muted: #415a77;
+  /* ===== SCROLLBAR ===== */
   --scrollbar-thin-thumb: #6e1e29;
   --scrollbar-thin-track: transparent;
 }
 
-/* ========== CANALES Y MENÚS ========== */
+/* ========== CANALES Y MENÚS LATERALES ========== */
 .containerDefault-YUSmu3, 
 .channelName-2YrOjO,
 .name-28HaxV,
@@ -42,10 +34,10 @@
 }
 
 .containerDefault-YUSmu3:hover {
-  background-color: #6e1e2944;
+  background-color: #6e1e2944; /* Fondo al pasar por encima de un canal */
 }
 
-/* ========== MENSAJES ========== */
+/* ========== MENSAJES EN EL CHAT ========== */
 .message-2CShn3 {
   background-color: #0d1b2a;
   border-left: 4px solid transparent;
@@ -56,7 +48,7 @@
   background-color: #1b263b;
 }
 
-/* ========== BOTONES ========== */
+/* ========== BOTONES GENERALES ========== */
 .button-1cRKG6 {
   background-color: #6e1e29;
   color: #f1f1f1;
@@ -66,7 +58,7 @@
   background-color: #8b2d36;
 }
 
-/* ========== MENÚS DESPLEGABLES Y POPUPS ========== */
+/* ========== MENÚS CONTEXTUALES / POPUPS ========== */
 .menu-2TXYjN {
   background-color: #1b263b;
   color: #f1f1f1;
@@ -74,10 +66,10 @@
 
 .item-1tOPte:hover {
   background-color: #6e1e29;
-  color: #fff;
+  color: #ffffff;
 }
 
-/* ========== REACCIONES ========== */
+/* ========== REACCIONES A MENSAJES ========== */
 .reaction-1hd86g {
   background-color: #415a77;
   border: 1px solid #6e1e29;
@@ -87,7 +79,7 @@
   background-color: #6e1e29;
 }
 
-/* ========== SCROLLBAR ========== */
+/* ========== SCROLLBAR PERSONALIZADO ========== */
 ::-webkit-scrollbar {
   width: 8px;
 }
