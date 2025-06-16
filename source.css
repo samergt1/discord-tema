@@ -6,7 +6,7 @@
 /* Esta regla afecta el elemento principal de la aplicación */
 body,
 #app-mount {
-  background-color: red !important; /* Fondo rojo */
+  background-color: rgb(255, 255, 255) !important; /* Fondo rojo */
 }
 
 /* Áreas de contenido principales (barras laterales, paneles de chat, etc.) */
