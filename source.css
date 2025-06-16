@@ -1,39 +1,91 @@
-/* ==================================== */
-/* ESTILOS DE FONDO                     */
-/* ==================================== */
-
-/* Fondo "fondo" - La base de Discord */
-/* Esta regla afecta el elemento principal de la aplicación */
-body,
-#app-mount {
-  background-color: rgb(255, 255, 255) !important; /* Fondo rojo */
+/* ========== FONDO GENERAL ========== */
+.theme-dark {
+  --background-primary: #0d1b2a;
+  --background-secondary: #1b263b;
+  --background-secondary-alt: #1b263b;
+  --background-tertiary: #415a77;
+  --channeltextarea-background: #1b263b;
+  --background-accent: #6e1e29;
+  --background-floating: #1b263b;
+  --modal-background: #0d1b2a;
 }
 
-/* Áreas de contenido principales (barras laterales, paneles de chat, etc.) */
-/* Haremos que estas sean transparentes */
-/* Las siguientes clases son comunes en Discord para estas áreas */
-.app-2rEoYc, /* Contenedor principal de la aplicación */
-.bg-1QIAay, /* Fondo de las barras laterales y paneles */
-.panels-j1yQMk, /* Panel de usuario inferior */
-.sidebar-1tnWFu, /* Barra lateral izquierda */
-.base-BGx2zE, /* Base del chat y lista de canales */
-.container-1r6BkF, /* Contenedores de chat */
-.scroller-3XqfQx, /* Scrollers de las listas (amigos, canales) */
-.content-1SgpWY, /* Contenido de los ajustes, etc. */
-.theme-dark .container-ZMc96U, /* Contenedor del servidor */
-.layer-86YKbF { /* Capa de modales, popups */
-  background-color: transparent !important; /* Hacerlos transparentes */
-  border: none !important; /* Eliminar bordes si los hay */
-  box-shadow: none !important; /* Eliminar sombras si las hay */
+/* ========== TEXTO Y BORDES ========== */
+:root {
+  --text-normal: #f1f1f1;
+  --text-muted: #c9c9c9;
+  --text-link: #6e1e29;
+  --interactive-normal: #f1f1f1;
+  --interactive-hover: #6e1e29;
+  --interactive-active: #6e1e29;
+  --interactive-muted: #415a77;
+  --scrollbar-thin-thumb: #6e1e29;
+  --scrollbar-thin-track: transparent;
 }
 
-/* Para asegurar que no haya un color de fondo residual en algunos elementos */
-[class*="background"],
-[class*="panel"],
-[class*="wrapper"] {
-    background-color: transparent !important;
+/* ========== CANALES Y MENÚS ========== */
+.containerDefault-YUSmu3, 
+.channelName-2YrOjO,
+.name-28HaxV,
+.link-39sEB3,
+.wrapper-1ucjTd {
+  color: #f1f1f1 !important;
 }
 
-/* ==================================== */
-/* FIN ESTILOS DE FONDO                 */
-/* ==================================== */
+.containerDefault-YUSmu3:hover {
+  background-color: #6e1e2944;
+}
+
+/* ========== MENSAJES ========== */
+.message-2CShn3 {
+  background-color: #0d1b2a;
+  border-left: 4px solid transparent;
+}
+
+.message-2CShn3:hover {
+  border-left: 4px solid #6e1e29;
+  background-color: #1b263b;
+}
+
+/* ========== BOTONES ========== */
+.button-1cRKG6 {
+  background-color: #6e1e29;
+  color: #f1f1f1;
+}
+
+.button-1cRKG6:hover {
+  background-color: #8b2d36;
+}
+
+/* ========== MENÚS DESPLEGABLES Y POPUPS ========== */
+.menu-2TXYjN {
+  background-color: #1b263b;
+  color: #f1f1f1;
+}
+
+.item-1tOPte:hover {
+  background-color: #6e1e29;
+  color: #fff;
+}
+
+/* ========== REACCIONES ========== */
+.reaction-1hd86g {
+  background-color: #415a77;
+  border: 1px solid #6e1e29;
+}
+
+.reaction-1hd86g:hover {
+  background-color: #6e1e29;
+}
+
+/* ========== SCROLLBAR ========== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6e1e29;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
