@@ -1,0 +1,22 @@
+:root {
+  /* Fondo general */
+  --app-bg: url("https://i.imgur.com/abc123.png"); /* O el link de tu GitHub */
+  --app-blur: 8px;
+  --app-radius: 10px;
+  --app-margin: 24px;
+
+  /* Colores principales */
+  --accent-hue: 200;
+  --accent-saturation: 70%;
+  --accent-lightness: 50%;
+  --accent-opacity: 1;
+  --accent-text-color: hsl(0, 0%, 100%);
+
+  /* Apariencia de mensajes */
+  --message-color: hsla(0, 0%, 0%, 0.4);
+  --message-radius: 10px;
+
+  /* Texto */
+  --text-primary: hsl(0, 0%, 95%);
+  --text-secondary: hsl(0, 0%, 75%);
+}
