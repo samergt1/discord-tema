@@ -16,9 +16,9 @@
 	--app-radius: 8px;
 
 	/* ACCENT HSL AND TEXT COLOR SETTINGS */
-	--accent-hue: 156;
-	--accent-saturation: 77.5%;
-	--accent-lightness: 47.1%;
+	--accent-hue: 156; /* Cambia esto por burdeos oscuro: 350 */
+    --accent-saturation: 77.5%; /* Puedes bajarlo si lo quieres más apagado */
+    --accent-lightness: 47.1%;
 	--accent-opacity: 1;
 	--accent-text-color: hsl(0,0%,0%);
 
